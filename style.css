@@ -1,0 +1,154 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: whitesmoke;
+    height: auto;
+    margin-top: 0;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #1b1c1e;
+    padding-top: 10px;
+    margin-bottom: 15px;
+}
+
+p {
+    white-space: pre-line;
+}
+
+button {
+    background-color: transparent;
+}
+
+.bg {
+    background-color: #313338;
+    padding: 5px;
+}
+
+.padding {
+    padding: 15px;
+}
+
+.navbar-button {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.page {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: stretch;
+}
+
+.row>* {
+    flex: 1;
+    align-self: stretch;
+}
+
+.column {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.column>* {
+    flex: 1;
+}
+
+.fixed-wdith>* {
+    flex-grow: 0;
+    width: 100px;
+}
+
+.narrow-column {
+    flex: 0.5;
+}
+
+.bigger-gap {
+    gap: 30px;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: darkblue;
+    padding: 5px;
+    color: coral
+}
+
+/* img {
+    object-fit: cover;
+} */
+
+img {
+    width: 100%;
+    max-height: 100%;
+    aspect-ratio: 1 / 1; /* Ensures the image is constrained to a square */
+    object-fit: contain; /* Makes the image fit without cropping */
+}
+
+video {
+    width: 100%;
+    max-width: 100%;
+    flex-grow: 0;
+}
+
+#image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#selected-image img {
+    /* width: 100%;
+    max-width: 100%;
+    max-height: max-content; */
+    margin-bottom: 20px;
+}
+
+#image-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+#image-gallery img {
+    width: 100%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+#image-gallery img:hover {
+    border-color: #007bff;
+}
+
+#image-gallery img.selected {
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
